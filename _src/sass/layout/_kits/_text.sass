@@ -1,0 +1,49 @@
+h2
+  color: $text-grey
+  font-size: 28px
+  line-height: 35px
+
+h3
+  color: $text-grey
+  font-size: 20px
+  line-height: 28px
+
+.paragraph
+  color: $text-grey
+  font-size: 18px
+  line-height: 29px
+  p
+    margin-bottom: 20px
+
+a
+  text-decoration: none
+  &:hover
+    color: $purple
+
+.underline-text
+  position: relative
+  z-index: 1
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    bottom: 0
+    left: -3%
+    width: 106%
+    height: 17px
+    transition: all .3s
+    z-index: -1
+  &_yellow
+    &:after
+      background-color: $yellow
+  &_purple
+    &:after
+      background-color: $purple
+  &_pink
+    &:after
+      background-color: $pink
+  &_light-blue
+    &:after
+      background-color: $light-blue
+
+

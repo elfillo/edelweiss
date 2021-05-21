@@ -1,0 +1,29 @@
+html
+  font-family: Mont, sans-serif
+  font-size: 16px
+  line-height: 20px
+  color: $text-grey
+
+body
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.container
+  width: 100%
+  max-width: 1600px
+  margin: 0 auto
+  +mw(1600)
+    padding: 0 15px
+
+.section
+  padding: 70px 0
+  margin-bottom: 100px
+
+  &_grey
+    background-color: $light-grey
+
+  &_cover-image
+    position: relative
+    margin-bottom: 0
+    overflow: hidden

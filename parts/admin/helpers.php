@@ -1,0 +1,26 @@
+<?php
+function dd($var, $dumb = 0){
+	echo '<pre>';
+	if($dumb){
+		var_dump($var);
+	}else{
+		print_r($var);
+	}
+	echo '</pre>';
+}
+
+function get_page_data($page){
+	$pages = get_pages(array(
+		'meta_key' => '_wp_page_template',
+		'meta_value' => $page.'.php'
+	));
+
+	return $pages[0];
+}
+
+function the_img_uri($relative_path)
+{
+	echo get_template_directory_uri() . '/assets/images/'.$relative_path;
+}
+
+?>

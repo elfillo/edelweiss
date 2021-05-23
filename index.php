@@ -85,4 +85,108 @@
         </div>
     </div>
 </section>
+<section class="section section_cover-image">
+    <div class="container">
+        <div class="text-image-block text-image-block_high">
+            <div class="text-image-block__text choose-section">
+                <div class="text-image-block__title">Выберите <span
+                            class="underline-text underline-text_pink">корпус</span>
+                </div>
+                <div class="choose-section__p choose-section__p_pale">
+                    Нажмите на интересующее вас строение и ниже появится краткая информация о корпусе 
+                </div>
+                <div class="choose-section__hr"></div>
+                <div class="choose-section__subtitle">Корпус №6</div>
+                <div class="choose-section__p choose-section__p_pale">Статус: В стадии строительства</div>
+                <div class="choose-section__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris proin
+                    pharetra malesuada egestas pellentesque in. Vehicula posuere donec non vestibulum.
+                </div>
+                <ul class="info-stats">
+                    <li class="info-stats__item">
+                        <div class="info-stats__count"><span class="underline-text underline-text_light-blue">8</span>
+                        </div>
+                        <div class="info-stats__desc">этажей</div>
+                    </li>
+                    <li class="info-stats__item">
+                        <div class="info-stats__count"><span class="underline-text underline-text_light-blue">92</span>
+                        </div>
+                        <div class="info-stats__desc">квартиры</div>
+                    </li>
+                    <li class="info-stats__item">
+                        <div class="info-stats__count"><span class="underline-text underline-text_light-blue">4</span>
+                        </div>
+                        <div class="info-stats__desc">секции</div>
+                    </li>
+                </ul>
+                <div class="text-image-block__buttons fx fx_jc-center">
+                    <button class="btn btn_underline">На страницу корпуса</button>
+                </div>
+            </div>
+            <div class="text-image-block__image text-image-block__image_cover">
+                <img src="<?php the_img_uri('temp-content/photo_1.png') ?>" alt="Фото жил комплекса">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <h2 class="section__title">Новости</h2>
+    <div class="container">
+        <div class="news-card">
+            <div class="news-card__cover"><img src="<?php the_img_uri('temp-content/news-card-cover.png') ?>" alt="#">
+            </div>
+            <div class="news-card__content">
+                <div class="news-card__date">07.06.2020</div>
+                <div class="news-card__title">С 02.07.2020 года начинается подписание актов приема-передачи по
+                    машиноместам
+                </div>
+                <a class="news-card__show-more" href="#">Подробнее</a>
+            </div>
+        </div>
+        <br>
+        <div class="news__list">
+            <div class="news-card news-card_big">
+                <div class="news-card__cover"><img src="<?php the_img_uri('temp-content/news-card-cover.png') ?>"
+                                                   alt="#"></div>
+                <div class="news-card__content">
+                    <div class="news-card__date">07.06.2020</div>
+                    <div class="news-card__title">С 02.07.2020 года начинается подписание актов приема-передачи по
+                        машиноместам
+                    </div>
+                    <div class="news-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
+                        nulla facilisis eu nunc, consectetur aliquam. Enim vulputate sodales nunc urna commodo.
+                    </div>
+                    <a class="news-card__more btn btn_underline" href="#">Подробнее</a>
+                </div>
+            </div>
+            <div class="news-card news-card_big">
+                <div class="news-card__cover"><img src="<?php the_img_uri('temp-content/news-card-cover.png') ?>"
+                                                   alt="#"></div>
+                <div class="news-card__content">
+                    <div class="news-card__date">07.06.2020</div>
+                    <div class="news-card__title">С 02.07.2020 года начинается подписание актов приема-передачи по
+                        машиноместам
+                    </div>
+                    <div class="news-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
+                        nulla facilisis eu nunc, consectetur aliquam. Enim vulputate sodales nunc urna commodo.
+                    </div>
+                    <a class="news-card__more btn btn_underline" href="#">Подробнее</a>
+                </div>
+            </div>
+            <div class="news-card news-card_big">
+                <div class="news-card__cover"><img src="<?php the_img_uri('temp-content/news-card-cover.png') ?>"
+                                                   alt="#"></div>
+                <div class="news-card__content">
+                    <div class="news-card__date">07.06.2020</div>
+                    <div class="news-card__title">С 02.07.2020 года начинается подписание актов приема-передачи по
+                        машиноместам
+                    </div>
+                    <div class="news-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius
+                        nulla facilisis eu nunc, consectetur aliquam. Enim vulputate sodales nunc urna commodo.
+                    </div>
+                    <a class="news-card__more btn btn_underline" href="#">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>

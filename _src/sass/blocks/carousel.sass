@@ -1,0 +1,28 @@
+.carousel
+  padding: 0 25px
+  &__list
+    margin-bottom: 40px
+  &__btn
+    width: 42px
+    height: 42px
+    border-radius: 100%
+    background-color: $white
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3)
+    +b_image('icons/swiper-arrow.svg', 'auto')
+    position: absolute
+    z-index: 3
+    cursor: pointer
+    transition: all .3s
+    &:hover
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.7)
+    &_next
+      top: 50%
+      right: 5px
+      transform: translate(0, -50%)
+    &_prev
+      top: 50%
+      left: 5px
+      transform: translate(0, -50%) rotate(180deg)
+  &__show-more
+    width: 170px
+    margin: auto

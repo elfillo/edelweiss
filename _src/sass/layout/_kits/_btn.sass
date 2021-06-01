@@ -55,6 +55,37 @@
       box-shadow: none
       opacity: 0.5
 
+  &_purple
+    height: 52px
+    font-size: 16px
+    color: $white !important
+    background-color: $purple
+    padding: 0 25px
+    border: 2px solid $purple
+    border-radius: 5px
+
+  &_yellow-border
+    height: 47px
+    font-size: 16px
+    color: $black !important
+    padding: 0 32px
+    border: 2px solid $yellow
+    border-radius: 2px
+
+    &:hover
+      box-shadow: 0 5px 20px rgba(205, 163, 13, 0.25)
+
+    &:focus
+      border: 2px solid $purple-focused
+      box-sizing: border-box
+
+    &:disabled
+      background-color: $disabled-grey
+      color: $grey !important
+      border-color: $disabled-grey
+      box-shadow: none
+      opacity: 0.5
+
   &_light-blue
     height: 64px
     font-size: 18px

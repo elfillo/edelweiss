@@ -1,20 +1,84 @@
 .choose-section
-  width: 100%
-  max-width: 420px !important
+  height: 834px
+  display: flex
+  justify-content: space-between
+  +mw(1199)
+    height: auto
+
+  &__content
+    width: 100%
+    max-width: 395px
+    +mw(1199)
+      max-width: 100%
+
+  &__title
+    font-size: 40px
+    line-height: 1.3
+    margin-bottom: 30px
+    +mw(1024)
+      font-size: 28px
+
+  &__description
+    font-size: 16px
+    line-height: 160%
+    color: #818181
+    +mw(1199)
+      margin-bottom: 25px
+
   &__hr
     width: 100%
     height: 2px
     margin: 30px 0
     background-color: $grey
-  &__subtitle
+    +mw(1199)
+      display: none
+
+  &__section-number
     font-size: 28px
     line-height: 1.3
     margin-bottom: 21px
-  &__p
+
+  &__section-status
+    font-size: 14px
+    color: #818181
+    margin-bottom: 30px
+
+  &__section-about
     font-size: 16px
-    line-height: 1.2
-    color: $text-grey
+    line-height: 24px
     margin-bottom: 15px
-    &_pale
-      color: $disabled-grey
-      line-height: 1.6
+
+  &__info-stats
+    width: 355px
+    justify-content: space-around
+    +mw(420)
+      width: 100%
+
+  &__link
+    width: 240px
+    margin: auto
+
+  &__map
+    width: 1300px
+    height: 834px
+    position: absolute
+    right: 0
+    top: 0
+    overflow: hidden
+    +mw(1920)
+      width: 70%
+    +mw(1440)
+      width: 60%
+    +mw(1199)
+      display: none
+
+    &_mobile
+      display: none
+      +mw(1199)
+        display: block
+        width: calc(100% + 40px)
+        height: 500px
+        overflow: hidden
+        margin-bottom: 25px
+        margin-left: -20px
+

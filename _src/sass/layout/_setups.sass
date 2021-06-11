@@ -18,6 +18,7 @@ body
 
 .list-flex
   display: flex
+
   &_sb
     justify-content: space-between
 
@@ -25,6 +26,21 @@ body
 .section
   padding: 70px 0
   margin-bottom: 100px
+  +mw(1200)
+    padding: 50px 0
+    margin-bottom: 70px
+  +mw(1024)
+    padding: 40px 0
+    margin-bottom: 60px
+  +mw(740)
+    padding: 20px 0
+    margin-bottom: 40px
+
+  &_no-padding
+    padding: 0
+
+  &_no-margin
+    margin-bottom: 0
 
   &_grey
     background-color: $light-grey
@@ -37,3 +53,6 @@ body
   &__title
     text-align: center
     margin-bottom: 70px
+
+.relative
+  position: relative

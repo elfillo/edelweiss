@@ -10,3 +10,14 @@ new Swiper(".news-carousel", {
         prevEl: ".news-carousel__btn_prev",
     },
 });
+
+new Swiper(".i-p-slider", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

@@ -1,6 +1,7 @@
 .image-border
   position: relative
   z-index: 2
+
   &:before
     content: ''
     width: 100%
@@ -9,18 +10,23 @@
     +image-border-position('right')
     position: absolute
     z-index: -1
+
   &_light-blue
     &:before
       border: 2.5px solid $light-blue
+
   &_green
     &:before
       border: 2.5px solid $green
+
   &_pink
     &:before
       border: 2.5px solid $pink
+
   &_purpule
     &:before
       border: 2.5px solid $purple
+
   &_left
     &:before
       +image-border-position('left')

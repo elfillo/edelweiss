@@ -1,0 +1,86 @@
+.infrastructure-map
+  &__map
+    width: 100%
+    height: 567px
+    +mw(425)
+      height: 325px
+  &__description
+    display: none
+    font-size: 14px
+    line-height: 1.6
+    color: $disabled-grey
+    +mw(640)
+      display: block
+    &_select
+      margin-bottom: 10px
+    &_map
+      font-size: 12px
+      margin-top: 20px
+      position: relative
+      &::after
+        display: block
+        content: ''
+        width: 38px
+        height: 38px
+        +b_image('icons/infrastructure-map__description-map-icon.svg')
+        position: absolute
+        right: 0
+        top: 0
+      span
+        display: block
+        width: 194px
+
+  &__list
+    display: flex
+    justify-content: center
+    margin-bottom: 36px
+    +mw(640)
+      display: none
+  &__list-mobile
+    display: none
+    width: 100%
+    height: 50px
+    border-radius: 5px
+    background-color: $light-grey
+    border: 1px solid $yellow
+    padding: 0 22px
+    margin-bottom: 26px
+    &:focus
+      outline: none
+    +mw(640)
+      display: block
+
+  &__item
+    width: 252px
+    height: 57px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 16px
+    border: 3px solid
+    cursor: pointer
+
+    &_school
+      color: #818181
+      border: 3px solid #A7DAFF
+      border-right: none
+      border-radius: 5px
+
+    &_kindergarten
+      color: $white
+      border-color: $purple
+      background-color: $purple
+
+    &_hospital
+      color: #818181
+      border: 3px solid $coral
+
+    &_grocery-store
+      color: $text-grey
+      border-color: $yellow
+      background-color: $yellow
+      border-radius: 5px
+      border-left: none
+
+.ymaps-2-1-78-searchbox
+  display: none !important

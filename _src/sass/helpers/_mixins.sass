@@ -1,83 +1,83 @@
 // Media mixin
-@mixin mw($width) 
-    @media screen and (max-width: $width + 'px') 
-        @content
+@mixin mw($width)
+  @media screen and (max-width: $width + 'px')
+    @content
 
 @mixin miw($width)
-    @media screen and (min-width: $width + 'px') 
-        @content
-        
-@mixin mmw($max-width, $min-width) 
-    @media (max-width: $max-width + 'px') and (min-width: $min-width + 'px') 
-        @content
-    
-    
+  @media screen and (min-width: $width + 'px')
+    @content
+
+@mixin mmw($max-width, $min-width)
+  @media (max-width: $max-width + 'px') and (min-width: $min-width + 'px')
+    @content
+
+
 // Font mixin
-@mixin font($name, $size, $weight, $style) 
-    @font-face 
-        font-family: $name
-        src: url('../fonts/'+ $name + '-'+ $size + '.woff2') format('woff2')
-        src: url('../fonts/'+ $name + '-'+ $size + '.woff') format('woff')
-        font-weight: $weight
-        font-style: $style
+@mixin font($name, $size, $weight, $style)
+  @font-face
+    font-family: $name
+    src: url('../fonts/'+ $name + '-'+ $size + '.woff2') format('woff2')
+    src: url('../fonts/'+ $name + '-'+ $size + '.woff') format('woff')
+    font-weight: $weight
+    font-style: $style
 
 // Position mixin
-@mixin centered($axis: 'both') 
-    position: absolute
-    @if $axis=='both' 
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
-    @if $axis=='x' 
-        left: 50%
-        transform: translateX(-50%)
-    @if $axis=='y' 
-        top: 50%
-        transform: translateY(-50%)
-    
+@mixin centered($axis: 'both')
+  position: absolute
+  @if $axis=='both'
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  @if $axis=='x'
+    left: 50%
+    transform: translateX(-50%)
+  @if $axis=='y'
+    top: 50%
+    transform: translateY(-50%)
+
 @function rem($size)
   @return ($size  / 16)+rem
 
 @mixin b_image($url, $size: contain, $position: center, $repeat: no-repeat)
-    background-image: url("../images/" + $url)
-    background-size: #{$size}
-    background-position: #{$position}
-    background-repeat: #{$repeat}
+  background-image: url("../images/" + $url)
+  background-size: #{$size}
+  background-position: #{$position}
+  background-repeat: #{$repeat}
 
 @mixin fullImg
-    img
-        width: calc(100% + 20px)
-        margin-left: -10px
+  img
+    width: calc(100% + 20px)
+    margin-left: -10px
 
 @mixin cutText($length)
-    overflow: hidden
-    text-overflow: ellipsis
-    display: -webkit-box
-    -webkit-line-clamp: $length
-    -webkit-box-orient: vertical
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-line-clamp: $length
+  -webkit-box-orient: vertical
 
 @mixin image-border-color($color)
-    border: 2.5px solid $color
+  border: 2.5px solid $color
 
 @mixin image-border-position($position)
-    @if $position=='right'
-        border-bottom: none
-        right: -37px
-        bottom: 37px
-        +mw(740)
-            right: -17px
-            bottom: 17px
-        +mw(420)
-            right: -10px
-            bottom: 10px
+  @if $position=='right'
+    border-bottom: none
+    right: -37px
+    bottom: 37px
+    +mw(740)
+      right: -17px
+      bottom: 17px
+    +mw(420)
+      right: -10px
+      bottom: 10px
 
-    @if $position=='left'
-        border-right: none
-        left: -37px
-        top: 37px
-        +mw(740)
-            left: -17px
-            top: 17px
-        +mw(420)
-            left: -10px
-            top: 10px
+  @if $position=='left'
+    border-right: none
+    left: -37px
+    top: 37px
+    +mw(740)
+      left: -17px
+      top: 17px
+    +mw(420)
+      left: -10px
+      top: 10px

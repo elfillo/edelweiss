@@ -1,13 +1,20 @@
 .contacts-index
   display: flex
   justify-content: space-between
+
   &__contact-card
     width: 100%
     max-width: 500px
+
   &__contacts-link
     width: 197px
     margin-top: 56px
+    +mw(940)
+      margin-top: 10px
+
   &__map
     width: 100%
     max-width: 1049px
     height: 571px
+    +mw(940)
+      display: none

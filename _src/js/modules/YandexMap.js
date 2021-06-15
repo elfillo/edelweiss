@@ -1,5 +1,5 @@
 import $ from "jquery";
-var mapScript = $.getScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+var mapScript = $.getScript('https://api-maps.yandex.ru/2.1/?apikey=191532b4-ae52-4052-927e-171be6f1a9db&lang=ru_RU');
 $.when(mapScript)
     .done(function () {
 
@@ -19,7 +19,7 @@ $.when(mapScript)
 
             myMap.behaviors.disable('scrollZoom');
 
-            //var placemark = setPlacemark(center);
+            var placemark = setPlacemark(center);
 
             markerCollectio.push(placemark);
             newMarkerCollection.add(placemark);
@@ -28,16 +28,15 @@ $.when(mapScript)
             setMapCenter(myMap, newMarkerCollection);
         }
 
-        // function setPlacemark(coords) {
-        //     var placemark = new ymaps.Placemark(coords, {}, {
-        //         iconLayout: 'default#image',
-        //         iconImageHref: '/wp-content/themes/silver-age/img/svg/marker.svg',
-        //         iconImageSize: [41, 50],
-        //         // iconImageOffset: [-25, -70]
-        //     });
-        //
-        //     return placemark;
-        // }
+        function setPlacemark(coords) {
+            var placemark = new ymaps.Placemark(coords, {}, {
+                iconLayout: 'default#image',
+                iconImageHref: '/wp-content/themes/edelweiss/assets/images/icons/infrastructure-map-icon.svg',
+                iconImageSize: [82, 96],
+            });
+
+            return placemark;
+        }
 
         function setMapCenter(map, collection) {
             var centerAndZoom = ymaps.util.bounds.getCenterAndZoom(

@@ -7,3 +7,4 @@ export default function autoHeightAnimate (element, time){
     element.height(curHeight);
     element.stop().animate({ height: autoHeight }, parseInt(time));
 }
+

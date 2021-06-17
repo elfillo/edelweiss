@@ -13,7 +13,7 @@
                                 область
                             </div>
                             <div class="i-p-slider__buttons">
-                                <button class="btn btn_yellow">Подобрать квартиру</button>
+                                <button class="btn btn_yellow" data-show-modal="apartment">Подобрать квартиру</button>
                                 <button class="btn btn_underline">Узнать стоитмость</button>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                                 область
                             </div>
                             <div class="i-p-slider__buttons">
-                                <button class="btn btn_yellow">Подобрать квартиру</button>
+                                <button class="btn btn_yellow" data-show-modal="apartment">Подобрать квартиру</button>
                                 <button class="btn btn_underline">Узнать стоитмость</button>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
                         <p>Покупая собственное парковочное место, вы всегда будете уверены, что в любое время сможете беспрепятственно выехать с территории парковки. В зимний период подъездные пути всегда расчищены и обработаны специальным составом Анти-Лед. Управляющая компания постоянно следит за чистотой и порядком на всей прилегающей территории.</p>
                     </div>
                     <div class="text-image-block__buttons">
-                        <button class="btn btn_yellow">Выбрать машиноместо</button>
+                        <button class="btn btn_yellow" data-show-modal="parking">Выбрать машиноместо</button>
                     </div>
                 </div>
                 <div class="text-image-block__image image-border image-border_purple">
@@ -208,29 +208,29 @@
     <section class="section">
         <div class="container no-hide">
             <div class="form form_free-consult">
-                <form action="#" class="form__form">
+                <form action="#" class="form__form js-form">
                     <div class="form__title">Получите бесплатную консультацию от наших специалистов</div>
                     <div class="form__description">Оставьте данные для связи и наши менеджеры вскоре с вами свяжутся</div>
                     <div class="form__inputs">
                         <div class="form__input">
                             <label for="">Введите имя</label>
-                            <input type="text" name="name" placeholder="Имя" autocomplete="off">
+                            <input type="text" name="name" placeholder="Имя" autocomplete="off" data-required>
                         </div>
                         <div class="form__input">
                             <label for="">Введите номер</label>
-                            <input type="tel" name="phone" placeholder="+7 (9__)-___-__-__" autocomplete="off">
+                            <input type="tel" name="phone" placeholder="+7 (9__)-___-__-__" autocomplete="off" data-required>
                         </div>
                     </div>
                     <div class="form__footer">
                         <div class="form__privacy-policy">
                             <label>
                                 Я принимаю <a href="#">Политику Конфиденциальности</a> и соглашаюсь на обработку персональных данных
-                                <input type="checkbox" checked="checked">
+                                <input type="checkbox" class="privacy-policy-checkbox">
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                         <div class="form__submit">
-                            <input type="submit" value="Отправить" class="btn btn_light-blue">
+                            <input type="submit" value="Отправить" class="btn btn_light-blue" disabled>
                         </div>
                     </div>
                 </form>

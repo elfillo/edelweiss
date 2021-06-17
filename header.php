@@ -21,7 +21,7 @@
                 </nav>
                 <div class="header-callback">
                     <a href="tel:+74957818822" class="header-callback__phone">(495) 781-88-22</a>
-                    <button class="btn btn_purple">Заказать звонок</button>
+                    <button class="btn btn_purple" data-show-modal="call-back">Заказать звонок</button>
                 </div>
             </div>
         </div>

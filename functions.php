@@ -24,4 +24,5 @@
 	add_post_type_support('page', 'excerpt');
 
 	include 'parts/admin/helpers.php';
+	include 'parts/admin/submit-form.php';
 ?>

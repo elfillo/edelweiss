@@ -15,8 +15,11 @@
 	}
 
 	add_action('wp_enqueue_scripts', 'enqueue_script');
-	//header_menu
-	register_nav_menu('header', 'Меню в хедере');
+	
+	//menu
+	register_nav_menu('header-top', 'Верхнее меню хэдера');
+	register_nav_menu('header-main', 'Основное меню хэдера');
+	register_nav_menu('footer', 'Меню подвала');
 
 	//add thumbnails
 	add_theme_support('post-thumbnails');
@@ -25,4 +28,5 @@
 
 	include 'parts/admin/helpers.php';
 	include 'parts/admin/submit-form.php';
+	include 'parts/admin/post_types.php';
 ?>

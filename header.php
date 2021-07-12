@@ -14,9 +14,13 @@
             <div class="container">
                 <nav class="header-nav_top">
                     <ul class="header-nav_top__list">
-                        <li class="header-nav_top__item"><a href="#">О компании</a></li>
-                        <li class="header-nav_top__item"><a href="#">Акции</a></li>
-                        <li class="header-nav_top__item"><a href="#">Контакты</a></li>
+                        <?php foreach(get_menu_items('header-top') as $topMenuItem):?>
+                            <li class="header-nav_top__item <?php echo $topMenuItem['is_active'] ? 'active' : ''?>">
+                                <a href="<?php echo $topMenuItem['url']?>">
+                                    <?php echo $topMenuItem['title'] ?>
+                                </a>
+                            </li>
+                        <?php endforeach;?>
                     </ul>
                 </nav>
                 <div class="header-callback">
@@ -27,7 +31,7 @@
         </div>
         <div class="header_bottom">
             <div class="container">
-                <a href="<?php site_url() ?>" class="header__logo logo_header logo_rect"></a>
+                <a href="/" class="header__logo logo_header logo_rect"></a>
                 <nav class="header-nav_bottom">
                     <ul class="header-nav_bottom__list">
                         <li class="header-nav_bottom__item active"><a href="#">Недвижимость</a></li>

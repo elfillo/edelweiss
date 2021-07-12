@@ -238,33 +238,7 @@
         </div>
     </section>
     <section class="section">
-        <div class="container">
-            <h2 class="section__title">Новости</h2>
-            <div class="swiper-container news-carousel carousel">
-                <div class="swiper-wrapper carousel__list">
-                    <?php for ($i = 0; $i <=12; $i++):?>
-                    <div class="swiper-slide news-carousel__item">
-                        <div class="news-card">
-                            <div class="news-card__cover"><img
-                                        src="<?php the_img_uri('temp-content/news-card-cover.png') ?>" alt="#">
-                            </div>
-                            <div class="news-card__content">
-                                <div class="news-card__date">07.06.2020</div>
-                                <div class="news-card__title">С 02.07.2020 года начинается подписание актов приема-передачи
-                                    по
-                                    машиноместам
-                                </div>
-                                <a class="news-card__show-more" href="#">Подробнее</a>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endfor;?>
-                </div>
-                <div class="carousel__btn carousel__btn_next news-carousel__btn_next"></div>
-                <div class="carousel__btn carousel__btn_prev news-carousel__btn_prev"></div>
-                <a href="#" class="carousel__show-more btn btn_underline">Смотреть все</a>
-            </div>
-        </div>
+	    <?php include 'template-parts/news-carousel.php'?>
     </section>
     <section class="section">
         <div class="container">

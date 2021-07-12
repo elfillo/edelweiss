@@ -12,7 +12,7 @@ $.when(mapScript)
 
             var newMarkerCollection = new ymaps.GeoObjectCollection();
             var markerCollectio = [];
-            var center = [52.287334, 104.285813];
+            var center = [55.758504, 37.862543];
 
             var myMap = new ymaps.Map(infrastructureMapId, {
                 center: center,

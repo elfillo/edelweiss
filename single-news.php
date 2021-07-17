@@ -1,6 +1,8 @@
 <?php get_header(); ?>
+    <div class="container">
     <div class="breadcrumbs">
       <?php the_breadcrumbs(['Медиа' => site_url(), 'Новости' => site_url('news'), get_the_title() => '']) ?>
+    </div>
     </div>
     <section class="section">
         <div class="container">

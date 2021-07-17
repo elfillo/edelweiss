@@ -13,9 +13,17 @@ body
   width: 100%
   max-width: 1600px
   margin: 0 auto
-  overflow: hidden
+  //overflow: hidden
   +mw(1600)
     padding: 0 20px
+
+img
+  &._contain
+    object-fit: contain !important
+
+p
+  &._bold
+    font-weight: 600 !important
 
 .list-flex
   display: flex

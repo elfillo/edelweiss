@@ -4,45 +4,20 @@
         <a href="<?php site_url() ?>" class="footer__logo logo_footer logo_sq"></a>
         <div class="footer__nav">
             <ul class="footer__nav-list">
-                <li class="footer__nav-item">
-                    <a href="#">Недвижимость</a>
-                    <ul class="footer__sub-nav-list">
-                        <li class="footer__sub-nav-item"><a href="#">Жилая</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Коммерческая</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Машиноместа</a></li>
-                    </ul>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">Выбрать <br/>квартиру</a>
-                    <ul class="footer__sub-nav-list">
-                        <li class="footer__sub-nav-item"><a href="#">Таблица квартир</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Планировки</a></li>
-                    </ul>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">Клиентам</a>
-                    <ul class="footer__sub-nav-list">
-                        <li class="footer__sub-nav-item"><a href="#">Ипотека</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Выдача ключей</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Оформление собственности</a></li>
-                    </ul>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">Медиа</a>
-                    <ul class="footer__sub-nav-list">
-                        <li class="footer__sub-nav-item"><a href="#">Новости</a></li>
-                        <li class="footer__sub-nav-item"><a href="#">Live</a></li>
-                    </ul>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">О компании</a>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">Акции</a>
-                </li>
-                <li class="footer__nav-item">
-                    <a href="#">Контакты</a>
-                </li>
+                <?php foreach(get_menu_items('footer') as $item):?>
+                    <li class="footer__nav-item <?php echo $item['is_active'] ? 'active' : ''?>">
+                        <a href="<?php echo $item['url']?>"><?php echo $item['title']?></a>
+                        <?php if(!empty($item['children'])):?>
+                            <ul class="footer__sub-nav-list">
+                                <?php foreach ($item['children'] as $child):?>
+                                <li class="footer__sub-nav-item">
+                                    <a href="<?php echo $child['url']?>"><?php echo $child['title']?></a>
+                                </li>
+                                <?php endforeach;?>
+                            </ul>
+                        <?php endif;?>
+                    </li>
+                <?php endforeach;?>
             </ul>
         </div>
         <div class="footer-contacts">

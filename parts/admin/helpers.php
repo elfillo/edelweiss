@@ -47,7 +47,7 @@ function get_menu_items($location)
 		];
 
 		if($item->menu_item_parent){
-			$menuNestedArr[$item->menu_item_parent]['child'][$item->ID]	= $i;
+			$menuNestedArr[$item->menu_item_parent]['children'][$item->ID]	= $i;
 		}else{
 			$menuNestedArr[$item->ID] = $i;
 		}

@@ -34,17 +34,20 @@
                 <a href="/" class="header__logo logo_header logo_rect"></a>
                 <nav class="header-nav_bottom">
                     <ul class="header-nav_bottom__list">
-                        <li class="header-nav_bottom__item active"><a href="#">Недвижимость</a></li>
-                        <li class="header-nav_bottom__item"><a href="#">Выбрать квартиру</a></li>
-                        <li class="header-nav_bottom__item dropdown-li">
-                            <a href="#">Клиентам</a>
-                            <ul class="header-nav__dropdown-menu">
-                                <li class="header-nav__dropdown-item"><a href="#">Выдача ключей</a></li>
-                                <li class="header-nav__dropdown-item"><a href="#">Оформление собственности</a></li>
-                                <li class="header-nav__dropdown-item"><a href="#">Ипотека</a></li>
-                            </ul>
+                    <?php foreach (get_menu_items('header-main') as $item):?>
+                        <li class="header-nav_bottom__item <?php echo $item['is_active'] ? 'active' : ''?> <?php echo !empty($item['children']) ? 'dropdown-li' : ''?>">
+                            <a href="<?php echo $item['url']?>"><?php echo $item['title']?></a>
+                            <?php if(!empty($item['children'])):?>
+                                <ul class="header-nav__dropdown-menu">
+                                    <?php foreach ($item['children'] as $child):?>
+                                    <li class="header-nav__dropdown-item">
+                                        <a href="<?php echo $child['url']?>"><?php echo $child['title']?></a>
+                                    </li>
+                                    <?php endforeach;?>
+                                </ul>
+                            <?php endif;?>
                         </li>
-                        <li class="header-nav_bottom__item"><a href="#">Медиа</a></li>
+                    <?php endforeach;?>
                     </ul>
                 </nav>
                 <div class="header-search-block">

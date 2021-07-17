@@ -1,0 +1,40 @@
+.contacts
+  display: flex
+  justify-content: space-between
+  margin-bottom: 100px
+
+  .contact-card
+    width: 29%
+    border-right: 2px solid #E4E4E4
+
+    &__title
+      font-size: 24px
+      line-height: 1.4
+
+    &:last-child
+      border-right: none
+
+  &-map
+    &__map
+      width: 100%
+      height: 446px
+    &__list
+      width: fit-content
+      display: flex
+      border: 2px solid $yellow
+    &__item
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 182px
+      height: 48px
+      cursor: pointer
+      &:hover
+        background-color: $yellow
+      &.active
+        background-color: $yellow
+      &:nth-child(2)
+        border-right: 2px solid $yellow
+        border-left: 2px solid $yellow
+    &__list-mobile
+      display: none

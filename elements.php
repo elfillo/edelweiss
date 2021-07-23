@@ -4,6 +4,7 @@
 	*/
 ?>
 <?php get_header(); ?>
+
 <section class="section section_cover-image">
     <div class="container">
         <div class="text-image-block text-image-block_high">
@@ -98,7 +99,7 @@
                             class="underline-text underline-text_pink">корпус</span>
                 </div>
                 <div class="choose-section__p choose-section__p_pale">
-                    Нажмите на интересующее вас строение и ниже появится краткая информация о корпусе 
+                    Нажмите на интересующее вас строениеи ниже появится краткая информация о корпусе
                 </div>
                 <div class="choose-section__hr"></div>
                 <div class="choose-section__subtitle">Корпус №6</div>
@@ -393,9 +394,9 @@
                 <ul class="contact-card__work-schedule">
                     <li class="contact-card__subtitle">График работы:</li>
                     <li>Пн-Чт: 9:00-18:00,</li>
-                    <li> Пт: 9:00-17:00</li>
-                    <li> Обед: 13:00-14:00,</li>
-                    <li> Выходной: Сб, Вс</li>
+                    <li>Пт: 9:00-17:00</li>
+                    <li>Обед: 13:00-14:00,</li>
+                    <li>Выходной: Сб, Вс</li>
                 </ul>
                 <a href="#" class="btn btn_yellow contacts-index__contacts-link">Другие офисы</a>
             </div>

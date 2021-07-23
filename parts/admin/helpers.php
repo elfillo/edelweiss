@@ -79,4 +79,9 @@ function the_breadcrumbs($args)
 	echo $bc;
 }
 
+function include_temp($temp_name)
+{
+	include(TEMPLATEPATH.'/'.$temp_name);
+}
+
 ?>

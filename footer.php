@@ -20,6 +20,7 @@
                 <?php endforeach;?>
             </ul>
         </div>
+	    <?php echo get_page_template_slug();?>
         <div class="footer-contacts">
             <div class="footer-contacts__title">Мы в соц.сетях</div>
             <ul class="footer-contacts__soc-list">

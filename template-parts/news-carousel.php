@@ -9,6 +9,7 @@
 	<div class="swiper-container news-carousel carousel">
 		<div class="swiper-wrapper carousel__list">
 			<?php while($news->have_posts()): $news->the_post();?>
+                <?php for($i = 0; $i < 6; $i++):?>
 				<div class="swiper-slide news-carousel__item">
 					<div class="news-card">
 						<div class="news-card__cover"><?php the_post_thumbnail()?></div>
@@ -19,6 +20,7 @@
 						</div>
 					</div>
 				</div>
+                <?php endfor;?>
 			<?php endwhile;?>
 		</div>
 		<div class="carousel__btn carousel__btn_next news-carousel__btn_next"></div>

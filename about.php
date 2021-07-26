@@ -74,18 +74,7 @@
 <section class="section">
     <div class="container">
         <h2 class="section__title">Реализованные объекты</h2>
-        <div class="object-list">
-	        <?php for ($i = 0; $i < 8; $i++):?>
-                <div class="object-card object-card_yellow">
-                    <div class="object-card__cover"><img src="<?php the_img_uri('temp-content/news-card-cover.png') ?>" alt="#">
-                    </div>
-                    <div class="object-card__content">
-                        <div class="object-card__city">Москва</div>
-                        <div class="object-card__title">ЖК «Эдельвейс» 5«Б»</div>
-                    </div>
-                </div>
-            <?php endfor;?>
-        </div>
+        <?php include('template-parts/object-list.php')?>
     </div>
 </section>
 <section class="section">

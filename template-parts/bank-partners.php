@@ -6,6 +6,7 @@
 ?>
 
 <h2 class="section__title">Банки-партнеры</h2>
+<div class="container">
 <div class="bank-partners">
     <div class="bank-partners__list">
 	    <?php while($records->have_posts()): $records->the_post();?>
@@ -21,4 +22,5 @@
             </div>
 		<?php endwhile;?>
     </div>
+</div>
 </div>

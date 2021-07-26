@@ -84,4 +84,23 @@ function include_temp($temp_name)
 	include(TEMPLATEPATH.'/'.$temp_name);
 }
 
+function getClassPrefForIconByExtension($ext){
+	switch (strtolower($ext)){
+		case 'docx':
+			return 'docx';
+		case 'doc':
+			return 'docx';
+		case 'xlsx':
+			return 'xlsx';
+		case 'xls':
+			return 'xlsx';
+		case 'pdf':
+			return 'pdf';
+		case 'txt':
+			return 'txt';
+		default:
+			return 'txt';
+	}
+}
+
 ?>

@@ -40,3 +40,14 @@ new Swiper(".i-p-slider", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+new Swiper(".building-gallery-slider", {
+    slidesPerView: 3,
+    slidesPerColumn: 2,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        clickable: true,
+    },
+});

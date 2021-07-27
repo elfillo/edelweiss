@@ -1,7 +1,7 @@
 <?php wp_footer() ?>
 <footer class="footer">
     <div class="footer__container container">
-        <a href="<?php site_url() ?>" class="footer__logo logo_footer logo_sq"></a>
+        <a href="<?php echo site_url('/') ?>" class="footer__logo logo_footer logo_sq"></a>
         <div class="footer__nav">
             <ul class="footer__nav-list">
                 <?php foreach(get_menu_items('footer') as $item):?>
@@ -20,15 +20,14 @@
                 <?php endforeach;?>
             </ul>
         </div>
-	    <?php echo get_page_template_slug();?>
         <div class="footer-contacts">
             <div class="footer-contacts__title">Мы в соц.сетях</div>
             <ul class="footer-contacts__soc-list">
                 <li>
-                    <a href="#" class="footer-contacts__soc-item soc soc_inst"></a>
+                    <a href="https://www.instagram.com/" class="footer-contacts__soc-item soc soc_inst"></a>
                 </li>
                 <li>
-                    <a href="#" class="footer-contacts__soc-item soc soc_fb"></a>
+                    <a href="https://www.facebook.com/" class="footer-contacts__soc-item soc soc_fb"></a>
                 </li>
             </ul>
             <div class="footer-contacts__copyright">

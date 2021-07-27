@@ -12,10 +12,11 @@
     margin: 0 -14px
   &__list
     width: 100%
+    flex-direction: row !important
   &__item
     display: inline-block
-    width: 150px
-    height: 150px
+    width: 150px !important
+    height: 150px !important
     margin: 7px
   &__preview
     width: 100%
@@ -28,5 +29,20 @@
       border: 3px solid #8e3ffe !important
       border-left: none !important
       bottom: -37px !important
+  &__nav
+    width: 240px
+    height: 40px
+    text-align: center
+    margin-top: 70px
+    margin-left: calc(50% - 120px)
+    position: relative
+  &__next, &__prev
+    color: $purple !important
+    z-index: 20
+    &::after
+      font-size: 40px
+  &__count
+    font-size: 40px
+    color: $text-grey
 
 

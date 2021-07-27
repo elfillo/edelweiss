@@ -1,5 +1,5 @@
 import $ from "jquery";
-import autoHeightAnimate from './Helpers.js';
+import {autoHeightAnimate} from './_helpers';
 
 $(function (){
     var showMenu = false;

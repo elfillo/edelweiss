@@ -67,22 +67,30 @@
                 <div class="header-bookmarks"><span class="header-bookmarks__count">7</span></div>
             </div>
             <div class="header-mobile__hr"></div>
-            <ul class="header-mobile-nav__list">
-                <li class="header-mobile-nav__item"><a href="#">Недвижимость</a></li>
-                <li class="header-mobile-nav__item"><a href="#">Выбрать квартиру</a></li>
-                <li class="header-mobile-nav__item header-mobile-nav__item_drop-down">
-                    <span>Клиентам</span>
-                    <div class="header-mobile-nav__drop-down-container">
+            <ul class="header-mobile-nav__list" data-m-m-root-el>
+	        <?php foreach (get_menu_items('header-main') as $item):?>
+                <?php $hasChild = !empty($item['children']);?>
+                <li class="header-mobile-nav__item <?php echo $hasChild ? 'header-mobile-nav__item_drop-down' : ''?>"
+                        <?php echo $hasChild ? 'data-has-submenu' : ''?>
+                >
+                    <a href="<?php echo $item['url']?>" class="<?php echo $hasChild ? 'arrow' : ''?>">
+                      <?php echo $item['title']?>
+                    </a>
+                    <?php if($hasChild):?>
+                    <div class="header-mobile-nav__drop-down-container" data-submenu-container>
                         <ul class="header-mobile-nav__dropdown-menu">
-                            <li class="header-mobile-nav__dropdown-item"><a href="#">Выдача ключей</a></li>
-                            <li class="header-mobile-nav__dropdown-item"><a href="#">Оформление собственности</a></li>
-                            <li class="header-mobile-nav__dropdown-item"><a href="#">Ипотека</a></li>
+	                        <?php foreach ($item['children'] as $child):?>
+                                <li class="header-mobile-nav__dropdown-item">
+                                    <a href="<?php echo $child['url']?>"><?php echo $child['title']?></a>
+                                </li>
+                            <?php endforeach;?>
                         </ul>
                     </div>
+                    <?php endif;?>
                 </li>
-                <li class="header-mobile-nav__item"><a href="#">Медиа</a></li>
+            <?php endforeach;?>
             </ul>
-            <button class="header-mobile__get-callback btn btn_purple">Заказать звонок</button>
+            <button class="header-mobile__get-callback btn btn_purple" data-show-modal="call-back">Заказать звонок</button>
         </div>
     </div>
 </header>

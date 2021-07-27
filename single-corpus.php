@@ -55,14 +55,23 @@
         <div class="building-gallery">
             <div class="building-gallery__gallery">
                 <div class="building-gallery__title">Этапы строительства</div>
-                <div class="building-gallery__list">
-	                <?php foreach ($gallery as $g_item):?>
-                      <div class="building-gallery__item"
-                           data-show-preview="<?php echo $g_item['url']?>"
-                      >
-                          <img src="<?php echo $g_item['sizes']['thumbnail']?>" alt="<?php echo $g_item['alt']?>">
-                      </div>
-                    <?php endforeach;?>
+                <div class="swiper-container building-gallery-slider">
+                    <div class="building-gallery__list swiper-wrapper">
+	                    <?php for($i = 0; $i < 13; $i++):?>
+                        <?php foreach ($gallery as $g_item):?>
+                          <div class="building-gallery__item swiper-slide"
+                               data-show-preview="<?php echo $g_item['url']?>"
+                          >
+                              <img src="<?php echo $g_item['sizes']['thumbnail']?>" alt="<?php echo $g_item['alt']?>">
+                          </div>
+                        <?php endforeach;?>
+		                    <?php endfor;?>
+                    </div>
+                    <div class="building-gallery__nav">
+                        <div class="building-gallery__next swiper-button-next"></div>
+                        <div class="building-gallery__prev swiper-button-prev"></div>
+                        <div class="building-gallery__count swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
             <div class="building-gallery__preview image-border image-border_purple">

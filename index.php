@@ -69,7 +69,7 @@
                             предоставляются услуги консьержа и коменданта.</p>
                     </div>
                     <div class="text-image-block__buttons">
-                        <button class="btn btn_yellow">О жилой недвижимости</button>
+                        <a href="<?php echo site_url('novostrojki')?>" class="btn btn_yellow">О жилой недвижимости</a>
                     </div>
                 </div>
                 <div class="text-image-block__image image-border image-border_pink">
@@ -120,7 +120,7 @@
                             <div class="info-stats__desc">секции</div>
                         </li>
                     </ul>
-                    <a href="#" class="choose-section__link btn btn_underline">На страницу корпуса</a>
+                    <a href="<?php echo site_url('vybrat-kvartiru')?>" class="choose-section__link btn btn_underline">На страницу корпуса</a>
                 </div>
                 <div class="choose-section__map">
                     <img src="<?php the_img_uri('temp-content/choose-section-map.png') ?>" alt="Фото жил комплекса">
@@ -169,7 +169,7 @@
                         <p>ООО «Эдельвейс» имеет собственные цеха производства: более десятка цехов по производству строительных бетонных блоков, металлоизделий, столярных и полимерных изделий, пластиковых оконных рам и радиаторов отопления. За счет собственного производства основных компонентов мы существенно снижаем стоимость возводимого объекта.</p>
                     </div>
                     <div class="text-image-block__buttons">
-                        <button class="btn btn_yellow">Посмотреть объекты</button>
+                        <a href="<?php echo site_url('kommercheskaya-nedvizhimost')?>" class="btn btn_yellow">Посмотреть объекты</a>
                     </div>
                 </div>
                 <div class="text-image-block__image image-border image-border_green">
@@ -237,7 +237,7 @@
                         <li>Обед: 13:00-14:00,</li>
                         <li>Выходной: Сб, Вс</li>
                     </ul>
-                    <a href="#" class="btn btn_yellow contacts-index__contacts-link">Другие офисы</a>
+                    <a href="<?php echo site_url('kontakty')?>" class="btn btn_yellow contacts-index__contacts-link">Другие офисы</a>
                 </div>
                 <div class="contacts-index__map" id="index-page-contacts-map"></div>
             </div>

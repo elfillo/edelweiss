@@ -42,12 +42,16 @@ new Swiper(".i-p-slider", {
 });
 
 new Swiper(".building-gallery-slider", {
-    slidesPerView: 3,
-    slidesPerColumn: 2,
-    spaceBetween: 30,
+    slidesPerView: 4,
+    slidesPerColumn: 3,
+    spaceBetween: 14,
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
         clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });

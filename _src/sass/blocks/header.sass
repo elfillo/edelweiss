@@ -95,7 +95,7 @@
           line-height: 20px
           color: $yellow
         &_drop-down
-          span
+          a.arrow
             position: relative
             &:after
               content: ''
@@ -108,10 +108,9 @@
               right: -40px
               transform: rotate(180deg)
               transition: all .5s
-        &_drop-down.show-drop-down-menu
-          span
-            &:after
-              transform: rotate(0deg)
+            &_toggle
+              &:after
+                transform: rotate(0deg)
       &__drop-down-container
         height: 0
         overflow: hidden

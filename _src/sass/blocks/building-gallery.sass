@@ -1,34 +1,67 @@
 .building-gallery
   display: flex
   justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+  +mw(1180)
+    justify-content: center
   &__title
     font-size: 36px
     line-height: 47px
     color: $text-grey
     margin-bottom: 40px
+    width: 100%
+    +mw(1180)
+      order: 1
+      text-align: center
   &__gallery
     width: calc(100% + 28px)
     max-width: calc(645px + 28px)
     margin: 0 -14px
+    +mw(1360)
+      width: 100%
+      max-width: 485px
+      margin: 0
+    +mw(1180)
+      order: 3
+  &-slider
+    +mw(1180)
+      display: flex
+      flex-direction: column-reverse
   &__list
     width: 100%
     flex-direction: row !important
   &__item
     display: inline-block
-    width: 150px !important
-    height: 150px !important
     margin: 7px
+    img
+      width: 100%
+      height: auto
+      object-fit: contain
   &__preview
     width: 100%
     max-width: 747px
     height: 616px
+    +mw(1740)
+      width: 605px
+      height: 500px
+    +mw(1180)
+      order: 2
+    +mw(720)
+      width: 100%
+      height: auto
     img
       width: 100%
       height: 100%
+      object-fit: cover
     &::before
       border: 3px solid #8e3ffe !important
       border-left: none !important
       bottom: -37px !important
+      +mw(1740)
+        display: none
+
+
   &__nav
     width: 240px
     height: 40px
@@ -36,13 +69,21 @@
     margin-top: 70px
     margin-left: calc(50% - 120px)
     position: relative
+    +mw(1180)
+      margin: 70px auto
+    +mw(420)
+      margin: 20px auto
   &__next, &__prev
     color: $purple !important
     z-index: 20
     &::after
       font-size: 40px
+      +mw(420)
+        font-size: 25px
   &__count
     font-size: 40px
     color: $text-grey
+    +mw(420)
+      font-size: 25px
 
 

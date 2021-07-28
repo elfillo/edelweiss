@@ -1,47 +1,47 @@
+<?php
+    $slides = get_field('слайдер', get_the_ID());
+?>
 <?php get_header() ?>
     <section class="section section_no-padding section_no-margin">
         <div class="swiper-container i-p-slider">
             <div class="swiper-wrapper">
+                <?php foreach ($slides as $slide):?>
                 <div class="swiper-slide">
                     <div class="i-p-slider__item container">
                         <div class="i-p-slider__content">
                             <div class="i-p-slider__title">
-                                Вносим <span class="underline-text underline-text_yellow">краски</span> в ваше жильё
+                                <?php echo $slide['title']?>
                             </div>
                             <div class="i-p-slider__description paragraph">
-                                ЖК «Эдельвейс» — это современные дома от надёжного застройщика в г.Реутово, Московская
-                                область
+	                            <?php echo $slide['text']?>
                             </div>
                             <div class="i-p-slider__buttons">
-                                <button class="btn btn_yellow" data-show-modal="apartment">Подобрать квартиру</button>
-                                <button class="btn btn_underline">Узнать стоитмость</button>
+                                <?php if($slide['buttons'][0]):?>
+                                    <?php $btn = $slide['buttons'][0]['button']?>
+                                    <a href="<?php echo !isModalLink($btn['link']) ? $btn['link'] : '#' ?>"
+                                       class="btn btn_yellow"
+                                      <?php echo isModalLink($btn['link']) ? 'data-show-modal="'.$btn['link'].'"' : ''?>
+                                    >
+                                        <?php echo $btn['text']?>
+                                    </a>
+                                <?php endif;?>
+	                            <?php if($slide['buttons'][1]):?>
+			                        <?php $btn = $slide['buttons'][1]['button']?>
+                                    <a href="<?php echo !isModalLink($btn['link']) ? $btn['link'] : '#' ?>"
+                                       class="btn btn_underline"
+					                            <?php echo isModalLink($btn['link']) ? 'data-show-modal="'.$btn['link'].'"' : ''?>
+                                    >
+					                            <?php echo $btn['text']?>
+                                    </a>
+	                            <?php endif;?>
                             </div>
                         </div>
                         <div class="i-p-slider__image">
-                            <img src="<?php the_img_uri('temp-content/1.jpeg') ?>" alt="Фото жил комплекса">
+                            <img src="<?php echo $slide['image']['url']?>" alt="Фото жил комплекса">
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="i-p-slider__item container">
-                        <div class="i-p-slider__content">
-                            <div class="i-p-slider__title">
-                                Вносим <span class="underline-text underline-text_yellow">краски</span> в ваше жильё
-                            </div>
-                            <div class="i-p-slider__description paragraph">
-                                ЖК «Эдельвейс» — это современные дома от надёжного застройщика в г.Реутово, Московская
-                                область
-                            </div>
-                            <div class="i-p-slider__buttons">
-                                <button class="btn btn_yellow" data-show-modal="apartment">Подобрать квартиру</button>
-                                <button class="btn btn_underline">Узнать стоитмость</button>
-                            </div>
-                        </div>
-                        <div class="i-p-slider__image">
-                            <img src="<?php the_img_uri('temp-content/photo_1.png') ?>" alt="Фото жил комплекса">
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?>
             </div>
             <div class="container">
                 <div class="i-p-slider__navigation">
@@ -205,10 +205,10 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section section_slider">
 	    <?php include 'template-parts/form/consultation.php'?>
     </section>
-    <section class="section">
+    <section class="section section_slider">
 	    <?php include 'template-parts/news-carousel.php'?>
     </section>
     <section class="section">

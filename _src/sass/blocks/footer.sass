@@ -3,50 +3,88 @@
   padding: 63px 0
   background-color: $icons-grey
   margin-top: auto
+  +mw(720)
+    padding: 30px 0
+
   &__container
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
+
   &__logo
     display: block
+    +mw(1280)
+      order: 2
+    +mw(720)
+      width: 100px
+      height: 78px
+
+
   &-contacts
     padding-left: 50px
     border-left: 1px solid $disabled-grey
-    +mw(1300)
-      display: none
+    +mw(1280)
+      order: 3
+      border-left: none
+
     &__title
       font-size: 20px
       line-height: 1.4
       color: $light-grey
       margin-bottom: 12px
+      +mw(720)
+        font-size: 14px
+
     &__soc-list
       display: flex
       margin-bottom: 35px
+
     &__soc-item
       margin-right: 10px
+      +mw(720)
+        width: 35px
+        height: 35px
+
     &__copyright
       font-size: 14px
       line-height: 18px
       color: $disabled-grey
+      +mw(720)
+        font-size: 12px
+        line-height: 16px
+
       span
         display: block
+
   &__nav
     width: 100%
     max-width: 720px
-    +mw(1300)
-      display: none
+    +mw(1280)
+      order: 1
+      max-width: 100%
+      margin-bottom: 40px
+
     &-list
       display: flex
       flex-wrap: wrap
-      +mw(1300)
-        justify-content: flex-end
+      justify-content: flex-start
+
     &-item
       width: 25%
       max-width: 150px
       margin-bottom: 15px
+      +mw(1280)
+        margin: 10px
+      +mw(720)
+        width: 150px
+      +mw(420)
+        width: 120px
+
       a
         font-size: 14px
         line-height: 18px
         color: #EFEFEF
+
       > a
         display: block
         min-height: 40px
@@ -55,6 +93,7 @@
         line-height: 20px
         font-weight: bold
         color: $yellow
+
   &__sub-nav-item
     line-height: 1
     margin-bottom: 15px

@@ -103,4 +103,11 @@ function getClassPrefForIconByExtension($ext){
 	}
 }
 
+function isModalLink($link){
+	return $link === 'call-back' ||
+				 $link === 'parking' ||
+				 $link === 'apartment' ||
+				 $link === 'thank';
+}
+
 ?>

@@ -77,7 +77,7 @@
         <?php include('template-parts/object-list.php')?>
     </div>
 </section>
-<section class="section">
+<section class="section section_slider">
     <?php include 'template-parts/news-carousel.php'?>
 </section>
 <?php get_footer(); ?>

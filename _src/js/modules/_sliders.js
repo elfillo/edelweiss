@@ -42,9 +42,23 @@ new Swiper(".i-p-slider", {
 });
 
 new Swiper(".building-gallery-slider", {
-    slidesPerView: 4,
-    slidesPerColumn: 3,
-    spaceBetween: 14,
+    breakpoints: {
+        320:{
+            slidesPerView: 4,
+            slidesPerColumn: 3,
+            spaceBetween: 5,
+        },
+        1200: {
+            slidesPerView: 2,
+            slidesPerColumn: 3,
+            spaceBetween: 14,
+        },
+        1360:{
+            slidesPerView: 4,
+            slidesPerColumn: 3,
+            spaceBetween: 14,
+        }
+    },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",

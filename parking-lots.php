@@ -71,5 +71,5 @@
         </div>
     </div>
 </section>
-<section class="section"><?php include 'template-parts/news-carousel.php' ?></section>
+<section class="section section_slider"><?php include 'template-parts/news-carousel.php' ?></section>
 <?php get_footer() ?>

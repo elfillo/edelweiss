@@ -42,7 +42,7 @@
         </div>
     </div>
 </section>
-<section class="section"><?php include 'template-parts/objects-carousel.php' ?></section>
+<section class="section section_slider"><?php include 'template-parts/objects-carousel.php' ?></section>
 <section class="section section_grey">
     <div class="container">
         <div class="text-image-block">
@@ -97,6 +97,6 @@
         </div>
     </div>
 </section>
-<section class="section"><?php include 'template-parts/news-carousel.php' ?></section>
+<section class="section section_slider"><?php include 'template-parts/news-carousel.php' ?></section>
 <?php get_footer() ?>
 

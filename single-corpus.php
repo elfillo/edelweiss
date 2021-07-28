@@ -53,8 +53,8 @@
 <section class="section section_grey">
     <div class="container">
         <div class="building-gallery">
+            <div class="building-gallery__title">Этапы строительства</div>
             <div class="building-gallery__gallery">
-                <div class="building-gallery__title">Этапы строительства</div>
                 <div class="swiper-container building-gallery-slider">
                     <div class="building-gallery__list swiper-wrapper">
 	                    <?php for($i = 0; $i < 13; $i++):?>
@@ -125,7 +125,7 @@
 <section class="section">
 	<?php include 'template-parts/form/consultation.php'?>
 </section>
-<section class="section">
+<section class="section section_slider">
 	<?php include 'template-parts/news-carousel.php'?>
 </section>
 <?php get_footer()?>

@@ -17,7 +17,7 @@
                 </div>
                 <div class="text-image-block__buttons">
                     <button class="btn btn_yellow">Подобрать квартиру</button>
-                    <button class="btn btn_underline">Узнать стоитмость</button>
+                    <button class="btn btn_underline">Узнать стоимость</button>
                 </div>
             </div>
             <div class="text-image-block__image text-image-block__image_cover">

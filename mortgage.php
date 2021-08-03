@@ -6,7 +6,7 @@
 <?php get_header(); ?>
     <div class="container">
         <div class="breadcrumbs">
-					<?php the_breadcrumbs(['Клиентам' => site_url('klientam'), get_the_title() => '']) ?>
+					<?php the_breadcrumbs(['Клиентам' => site_url('klientam/'), get_the_title() => '']) ?>
         </div>
     </div>
     <div class="container">

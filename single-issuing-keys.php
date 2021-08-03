@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<div class="container">
 		<div class="breadcrumbs">
-			<?php the_breadcrumbs(['Клиентам' => site_url('klientam'), 'Выдача ключей' => site_url('vydacha-kljuchej'), get_the_title() => '']) ?>
+			<?php the_breadcrumbs(['Клиентам' => site_url('klientam/'), 'Выдача ключей' => site_url('vydacha-kljuchej/'), get_the_title() => '']) ?>
 		</div>
 	</div>
 	<section class="section">

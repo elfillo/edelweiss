@@ -45,7 +45,7 @@
             </ul>
             <div class="corpus-about__buttons">
                 <button class="btn btn_yellow" data-show-modal="apartment">Подобрать квартиру</button>
-                <button class="btn btn_underline" data-show-modal="parking">Узнать стоитмость</button>
+                <button class="btn btn_underline" data-show-modal="parking">Узнать стоимость</button>
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
 <h1>Коммерческая недвижимость</h1>
 <div class="container">
     <div class="breadcrumbs">
-			<?php the_breadcrumbs(['Недвижимость' => site_url('nedvizhimost'), 'Коммерческая недвижимость' => '']) ?>
+			<?php the_breadcrumbs(['Недвижимость' => site_url('nedvizhimost/'), 'Коммерческая недвижимость' => '']) ?>
     </div>
 </div>
 <h1>Коммерческая недвижимость</h1>

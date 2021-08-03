@@ -25,6 +25,6 @@
 		</div>
 		<div class="carousel__btn carousel__btn_next news-carousel__btn_next"></div>
 		<div class="carousel__btn carousel__btn_prev news-carousel__btn_prev"></div>
-		<a href="<?php echo site_url('news')?>" class="carousel__show-more btn btn_underline">Смотреть все</a>
+		<a href="<?php echo site_url('news/')?>" class="carousel__show-more btn btn_underline">Смотреть все</a>
 	</div>
 </div>

@@ -32,7 +32,7 @@ function flat_post_types()
         'query_var'           => true,
     ));
 
-    register_post_type('flat-plan', array(
+    /*register_post_type('flat-plan', array(
         'label'  => null,
         'labels' => array(
             'name'               => 'Планировка',
@@ -61,7 +61,7 @@ function flat_post_types()
         'has_archive'         => false,
         'rewrite'             => true,
         'query_var'           => true,
-    ));
+    ));*/
 }
 
 add_action('init', 'flat_post_types');

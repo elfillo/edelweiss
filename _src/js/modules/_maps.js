@@ -1,6 +1,7 @@
 import $ from "jquery";
 
-const apikey = '191532b4-ae52-4052-927e-171be6f1a9db';
+//const apikey = '191532b4-ae52-4052-927e-171be6f1a9db';
+const apikey = '';
 const mapScript = $.getScript(`https://api-maps.yandex.ru/2.1/?apikey=${apikey}&lang=ru_RU`);
 
 /*Карта на главной странице в блоке "Контакты"*/
@@ -15,7 +16,7 @@ if($(`#${indexPageContactMapId}`).length){
 
                 var newMarkerCollection = new ymaps.GeoObjectCollection();
                 var markerCollectio = [];
-                var center = [54.623363, 39.754539];
+                var center = [55.758504, 37.862543];
 
                 var myMap = new ymaps.Map(indexPageContactMapId, {
                     center: center,
@@ -67,7 +68,7 @@ if($(`#${infrastructureMapId}`).length){
 
                 var newMarkerCollection = new ymaps.GeoObjectCollection();
                 var markerCollectio = [];
-                var center = [52.287334, 104.285813];
+                var center = [55.758504, 37.862543];
 
                 var myMap = new ymaps.Map(infrastructureMapId, {
                     center: center,

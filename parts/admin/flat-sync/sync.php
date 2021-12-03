@@ -33,7 +33,7 @@ $info = 'Обновлены данные о ' . count($diff) . ' кв.';
         <div class="info_block">
             <?php echo $info ?>
         </div>
-        <a class="home_link" href="/wp-admin/">Вернуться в админку
+        <a class="home_link" href="/wp-admin/options-general.php?page=sync-flat-data">Вернуться в админку
     </div>
     </div>
 </body>

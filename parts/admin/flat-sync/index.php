@@ -3,7 +3,8 @@ include 'post_types.php';
 class FlatSync
 {
     const STORE_FILE_PATH = __DIR__ . '/flats.json';
-    private $lastUpdateTime; 
+    const PLUGIN_RELATIVE_PATH = 'parts/admin/flat-sync/';
+    private $lastUpdateTime;
     private $isFirstVisit; 
     public function __construct()
     {
@@ -35,8 +36,9 @@ class FlatSync
     public function create_sync_page()
     {
 ?>    
-        <?php $initAction = get_theme_file_uri('flat-sync/init.php'); ?>
-        <?php $updateAction = get_theme_file_uri('flat-sync/sync.php'); ?>
+        <?php $initAction = get_theme_file_uri(self::PLUGIN_RELATIVE_PATH.'init.php'); ?>
+        <?php $updateAction = get_theme_file_uri(self::PLUGIN_RELATIVE_PATH.'sync.php'); ?>
+        <?php $deleteAction = get_theme_file_uri(self::PLUGIN_RELATIVE_PATH.'delete.php'); ?>
         <?php if($this->isFirstVisit):?>
         <div class="wrap">
             <h1>Первоначальный парсинг</h1>
@@ -45,6 +47,7 @@ class FlatSync
             </form>
         </div>
         <?php endif;?>
+        <?php if(!$this->isFirstVisit):?>
         <div class="wrap">
             <h1>Обновление данных*</h1>
             <p>*Дата последнего обновления: <br/><?php echo $this->lastUpdateTime?></p>
@@ -52,6 +55,14 @@ class FlatSync
                 <?php submit_button('Обновить данные о квартирах'); ?>
             </form>
         </div>
+        <div class="wrap">
+            <h1>Удалить все данные.</h1>
+            <p>*! Все данные о квартирах будут безвозвратно удалены</p>
+            <form method="get" action="<?php echo $deleteAction ?>">
+                <?php submit_button('Удалить данные о квартирах'); ?>
+            </form>
+        </div>
+        <?php endif;?>
 <?php
     }
 }

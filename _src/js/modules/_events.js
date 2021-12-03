@@ -15,5 +15,10 @@ $(document).ready(function () {
         const prevImg = $('.building-gallery__preview').find('img');
         $(prevImg).attr('src', url);
     });
+
+    $('*[data-link]').click(function (){
+       let link = $(this).data('link');
+       if(link.length) window.location = link;
+    });
 });
 

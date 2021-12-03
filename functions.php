@@ -30,5 +30,5 @@
 	include 'parts/admin/submit-form.php';
 	include 'parts/admin/post_types.php';
 
-	//require get_theme_file_path('parts/admin/flat-sync/index.php');
+	require get_theme_file_path('parts/admin/flat-sync/index.php');
 ?>

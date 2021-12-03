@@ -110,4 +110,9 @@ function isModalLink($link){
 				 $link === 'thank';
 }
 
+function convertPriceString($str){
+    if(!$str) return '';
+    return number_format(floatval($str), 0, '', ' ');
+}
+
 ?>

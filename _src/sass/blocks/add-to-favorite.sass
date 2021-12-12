@@ -1,0 +1,14 @@
+.add-to-favorite
+  display: inline-block
+  width: 30px
+  height: 30px
+  +b_image('icons/bookmark.svg')
+  position: relative
+  margin-right: 20px
+  cursor: pointer
+  &:hover
+    +b_image('icons/bookmark-purpule.svg')
+  &.active
+    +b_image('icons/bookmark-purpule.svg')
+    &:hover
+      +b_image('icons/bookmark.svg')

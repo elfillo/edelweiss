@@ -43,6 +43,7 @@
                 </div>
                 <?php endforeach;?>
             </div>
+            <?php if (count($slides) > 1): ?>
             <div class="container">
                 <div class="i-p-slider__navigation">
                     <div class="swiper-button-next i-p-slider__btn i-p-slider__btn_next"></div>
@@ -50,6 +51,7 @@
                     <div class="swiper-pagination i-p-slider__pagination"></div>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </section>
     <section class="section section_grey">

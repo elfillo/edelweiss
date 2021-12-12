@@ -51,7 +51,7 @@
                     </ul>
                 </nav>
                 <div class="header-search-block">
-                    <div class="header-bookmarks"><span class="header-bookmarks__count">7</span></div>
+                    <a href="/favorite-list/" class="header-bookmarks"><span class="header-bookmarks__count">0</span></a>
                     <div class="header-search-form"><input type="search" placeholder="Я ищу..."></div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             <div class="header-mobile__burger burger"><span></span><span></span><span></span></div>
             <div class="header-mobile__search"></div>
             <div class="header-mobile__bookmarks">
-                <div class="header-bookmarks"><span class="header-bookmarks__count">7</span></div>
+                <a href="/favorite-list/" class="header-bookmarks"><span class="header-bookmarks__count">0</span></a>
             </div>
             <div class="header-mobile__hr"></div>
             <ul class="header-mobile-nav__list" data-m-m-root-el>
@@ -81,7 +81,7 @@
                         <ul class="header-mobile-nav__dropdown-menu">
 	                        <?php foreach ($item['children'] as $child):?>
                                 <li class="header-mobile-nav__dropdown-item">
-                                    <a href="<?php echo $child['url']?>"><?php echo $child['title']?></a>
+                                    <a href="<?php echo $child['url']?>" data-link><?php echo $child['title']?></a>
                                 </li>
                             <?php endforeach;?>
                         </ul>
@@ -93,5 +93,7 @@
             <button class="header-mobile__get-callback btn btn_purple" data-show-modal="call-back">Заказать звонок</button>
         </div>
     </div>
+    <input type="hidden" id="favourite-flats" value="">
+    <input type="hidden" id="favourite-flats-count" value="0">
 </header>
 <body>

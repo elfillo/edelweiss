@@ -213,7 +213,7 @@ $flats = new WP_Query($queryParams);
     </script>
 <?php get_header(); ?>
     <h1>Выбрать квартиру</h1>
-    <section class="section" style="overflow: scroll">
+    <section class="section">
         <div class="container">
             <form class="choose-flat-form">
                 <div class="choose-flat-form__filter">
@@ -261,7 +261,7 @@ $flats = new WP_Query($queryParams);
                 </div>
             </form>
         </div>
-        <div class="container">
+        <div class="container" style="overflow: scroll">
             <?php if(count($flats->posts)): ?>
                 <div class="table-container">
                     <table class="choose-apartment-table">

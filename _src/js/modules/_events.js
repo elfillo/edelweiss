@@ -20,5 +20,50 @@ $(document).ready(function () {
        let link = $(this).data('link');
        if(link.length) window.location = link;
     });
+
+    $('.add-to-favorite').click(function (){
+        let idsFromStorage = JSON.parse(window.localStorage.getItem('favourite-flats'))
+        let flatId = $(this).data('flat-id');
+
+        if(idsFromStorage){
+            if(!idsFromStorage.id.includes(flatId)){
+                idsFromStorage.id.push(flatId);
+            }else{
+                const index = idsFromStorage.id.indexOf(flatId);
+                if (index > -1) {
+                    idsFromStorage.id.splice(index, 1);
+                }
+            }
+        }else{
+            idsFromStorage = {id: [flatId]}
+        }
+
+        window.localStorage.setItem('favourite-flats', JSON.stringify(idsFromStorage));
+        location.reload();
+    });
+
+    let favoriteList = JSON.parse(window.localStorage.getItem('favourite-flats'));
+
+    if(favoriteList){
+        let count = favoriteList.id.length;
+        $('#favourite-flats').val(count);
+        $('#favourite-flats-count').val(favoriteList);
+        $('.header-bookmarks__count').text(count);
+    }
+
+    let flatIdOnPage = $('*[data-flat-id]')[0];
+    if(flatIdOnPage){
+        let pageId = $(flatIdOnPage).data('flat-id');
+        let favoriteList = JSON.parse(window.localStorage.getItem('favourite-flats'));
+
+        if(favoriteList){
+            if(favoriteList.id.includes(pageId)){
+                $(flatIdOnPage).addClass('active');
+            }
+        }
+    }
+
+    let cook = document.cookie;
+    console.log(cook);
 });
 

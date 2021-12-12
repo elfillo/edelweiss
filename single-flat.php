@@ -11,7 +11,11 @@
                 <img src="<?php the_img_uri('temp-content/flat-plan.png') ?>" alt="Планировка квартиры">
             </div>
             <div class="flat-info">
-                <div class="flat-info__title"><?php echo get_post_meta($post->ID, 'number_of_rooms')[0]?> - комнатная квартира</div>
+                <div class="flat-info__title">
+                    <span class="text"><?php echo get_post_meta($post->ID, 'number_of_rooms')[0]?> - комнатная квартира</span>
+                    <span class="bookmark"><span class="add-to-favorite" data-flat-id="<?php echo get_the_ID() ?>"></span></span>
+
+                </div>
                 <div class="flat-info__sub-title">Корпус "<?php echo get_post_meta($post->ID, 'house_number')[0]?>"</div>
                 <?php
                 $cost_per_sq_met = get_post_meta($post->ID, 'cost_per_sq_met')[0];
